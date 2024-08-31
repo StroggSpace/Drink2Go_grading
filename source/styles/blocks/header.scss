@@ -1,5 +1,241 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  @media screen and (min-width: 768px) {
+    padding: 20px 22px;
+  }
+}
+
+.header__wrapper {
+  @media screen and (max-width: 767px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 60px 1fr;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-wrapper {
+  @media screen and (max-width: 767px) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    align-self: center;
+    z-index: 2;
+
+    padding: 0px 20px;
+  }
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__title {
+  @include basic-text(left);
+  font-size: 12px;
+  line-height: 16px;
+
+  @media screen and (max-width: 1279px) {
+    @include visually-hidden;
+  }
+}
+
+.header__nav {
+  text-transform: uppercase;
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 60px 1fr;
+
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.header__nav-list {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+
+    grid-column: 1 / -1;
+    grid-row: 2 / -1;
+
+    border-top: 1px solid $base-secondary;
+    border-bottom: 1px solid $base-secondary;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+.header__nav-item {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      border-bottom: 1px solid $base-secondary;
+    }
+  }
+}
+
+.header__nav-link {
+  width: 100%;
+  padding: 20px 0;
+
+  @media screen and (max-width: 767px) {
+    @include basic-text(center);
+    font-weight: 500px;
+    font-size: 12px;
+    line-height: 16px;
+
+    &:active {
+      background-color: $base-secondary;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &:hover,
+    &:focus {
+      color: $base-primary;
+    }
+
+    &:active {
+      color: $base-primary;
+      background-color: $base-secondary;
+    }
+  }
+}
+
+.header__nav-link--active {
+  @media screen and (min-width: 768px) {
+    color: $base-primary;
+    margin-bottom: -2px;
+    border-bottom: 2px solid $base-primary;
+  }
+}
+
+.header__user-list {
+  @media screen and (max-width: 767px) {
+    grid-column: 2 / -1;
+  }
+
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__user-item {
+  height: 100%;
+}
+
+.header__user-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 0 20px;
+  height: 100%;
+
+  &:active {
+    background-color: $base-secondary;
+  }
+}
+
+.header__user-link--login {
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+
+    mask-image: url("../../icons/user.svg");
+    background-color: $base-black;
+  }
+
+  @media screen and (min-width: 768px) {
+    &:hover,
+    &:focus,
+    &:active {
+      color: $base-primary;
+      &::before {
+        background-color: $base-primary;
+      }
+    }
+  }
+}
+
+.header__user-link--basket {
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+
+    mask-image: url("../../icons/basket.svg");
+    background-color: $base-black;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: -20px;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $base-primary;
+      &::before {
+        background-color: $base-primary;
+      }
+    }
+  }
+}
+
+.header__user-text {
+  @media screen and (max-width: 1279px) {
+    @include visually-hidden;
+  }
+}
+
+.header__user-burger {
+  width: 100%;
+  height: 100%;
+
+  background-color: transparent;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  @media screen and (min-width: 768px) {
+    @include visually-hidden;
+  }
+}
+
+.header__user-burger--open {
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-image: url("../../icons/close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }

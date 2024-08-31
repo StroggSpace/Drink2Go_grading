@@ -1,18 +1,31 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
 
 html {
-  box-sizing: border-box;
+  height: 100dvh;
+  width: 100dvw;
+  scroll-behavior: smooth;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 0;
+
+  @include basic-text(center);
+  background-color: $base-white;
+
+  @media screen and (min-width: 768px) {
+    @include basic-text(center);
+  }
+
+  @media screen and (min-width: 1280px) {
+    @include basic-text(left);
+  }
 }
 
 img {
@@ -23,10 +36,10 @@ img {
 a,
 a:visited,
 button {
+  display: inline-block;
   text-decoration: none;
   border: none;
   outline: none;
-  color: inherit;
 }
 
 ul {
@@ -46,41 +59,10 @@ h6 {
   padding: 0;
 }
 
+button {
+  @include button-default;
+}
+
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.button-default {
-  background-color: $base-primary;
-  color: $base-white;
-  padding: 8px 20px;
-
-  &:hover {
-    background-color: $primary-lighter;
-  }
-
-  &:active {
-    background-color: $primary-darker;
-  }
-
-  &:disabled {
-    background-color: $base-gray;
-  }
-}
-
-.button-alt {
-  @extend .button-default;
-  background-color: $base-white;
-  color: $base-primary;
-
-  &:disabled {
-    background-color: $light-gray;
-  }
+  @include visually-hidden;
 }

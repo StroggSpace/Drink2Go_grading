@@ -33,7 +33,74 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="header">
+      <div class="header__wrapper">
+        <a class="header__logo-wrapper" href="#">
+          <picture>
+            <source
+              width="32"
+              height="36"
+              media="(max-width: 767px)"
+              srcset="images/logo_xs.svg"
+            />
+            <source
+              width="82"
+              height="36"
+              media="(min-width: 768px) and (max-width: 1279px)"
+              srcset="images/logo_md.svg"
+            />
+            <source
+              width="170"
+              height="36"
+              media="(min-width: 1280px)"
+              srcset="images/logo_lg.svg"
+            />
+            <img width="32" height="36" src="images/logo_xs.svg" alt="Logo" />
+          </picture>
+          <h1 class="header__title">Интернет-магазин кофейных напитков</h1>
+        </a>
+
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link header__nav-link--active" href="#"
+                >Главная
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Каталог</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Доставка</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">О нас</a>
+            </li>
+          </ul>
+
+          <ul class="header__user-list">
+            <li class="header__user-item">
+              <a class="header__user-link header__user-link--login" href="#">
+                <p class="header__user-text">Войти</p></a
+              >
+            </li>
+            <li class="header__user-item">
+              <a class="header__user-link header__user-link--basket" href="#">
+                <p class="header__user-text">Корзина</p>
+              </a>
+            </li>
+            <li class="header__user-item">
+              <button
+                type="button"
+                class="header__user-link header__user-burger header__user-burger--open"
+              >
+                <p class="visually-hidden">Меню</p>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <main>
       <h1>Страница для старта</h1>
     </main>
