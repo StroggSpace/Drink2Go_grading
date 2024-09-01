@@ -1,0 +1,120 @@
+// Text mixins
+@mixin basic-text($align, $color: $base-black) {
+  font-family: $primary-font;
+  color: $color;
+  text-align: $align;
+  font-weight: 400;
+}
+@mixin title-text($align, $color: $base-black) {
+  font-family: $primary-font;
+  color: $color;
+  text-align: $align;
+  font-weight: 700;
+}
+
+@mixin slide-header-xs {
+  @include title-text(center);
+  font-size: 36px;
+  line-height: 48px;
+}
+
+@mixin slide-header-md-lg($align) {
+  @include title-text($align);
+  font-size: 56px;
+  line-height: 80px;
+}
+
+@mixin slide-description-xs {
+  @include basic-text(center);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin slide-description-md-lg($align) {
+  @include basic-text($align);
+  font-size: 20px;
+  line-height: 32px;
+}
+
+@mixin h2-xs {
+  @include title-text(center);
+  font-size: 24px;
+  line-height: 36px;
+}
+
+@mixin h2-md-lg($align) {
+  @include title-text($align);
+  font-size: 42px;
+  line-height: 64px;
+}
+
+@mixin h3-xs {
+  @include title-text(left);
+  font-size: 18px;
+  line-height: 32px;
+}
+
+@mixin h3-md-lg {
+  @include title-text(left);
+  font-size: 24px;
+  line-height: 36px;
+}
+
+@mixin h4 {
+  @include title-text(left, $base-primary);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin badge {
+  @include title-text(center, $base-primary);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin oldPrice {
+  @include basic-text(left, $base-primary);
+  font-size: 16px;
+  line-height: 32px;
+  text-decoration-line: line-through;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin button-default {
+  background-color: $base-primary;
+  color: $base-white;
+  padding: 8px 20px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-gray;
+  }
+}
+
+@mixin button-alt {
+  @extend .button-default;
+  background-color: $base-white;
+  color: $base-primary;
+
+  &:disabled {
+    background-color: $light-gray;
+  }
+}

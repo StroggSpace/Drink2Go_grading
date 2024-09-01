@@ -1,6 +1,6 @@
 .header {
   @media screen and (min-width: 768px) {
-    padding: 20px 22px;
+    padding: 0 22px;
   }
 }
 
@@ -114,6 +114,7 @@
     &:active {
       color: $base-primary;
       background-color: $base-secondary;
+      border-bottom: 2px solid $base-secondary;
     }
   }
 }
@@ -121,7 +122,6 @@
 .header__nav-link--active {
   @media screen and (min-width: 768px) {
     color: $base-primary;
-    margin-bottom: -2px;
     border-bottom: 2px solid $base-primary;
   }
 }

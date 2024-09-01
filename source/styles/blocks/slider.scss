@@ -1,0 +1,228 @@
+.slider {
+  width: 100%;
+}
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    height: 530px;
+  }
+}
+
+[data-swiper-slide-index="0"] {
+  background-color: $flat-white;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    background: linear-gradient(to bottom, $flat-white 80%, white 20%);
+  }
+}
+
+[data-swiper-slide-index="1"] {
+  background-color: $espresso;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    background: linear-gradient(to bottom, $espresso 80%, white 20%);
+  }
+}
+
+[data-swiper-slide-index="2"] {
+  background-color: $lavender-latte;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    background: linear-gradient(to bottom, $lavender-latte 80%, white 20%);
+  }
+}
+
+.slider__image {
+  width: 280px;
+  height: 280px;
+  padding: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 476px;
+    height: 476px;
+    padding: 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+swiper-container::part(pagination) {
+  @media screen and (max-width: 1279px) {
+    @include visually-hidden;
+  }
+}
+
+.slider__slide-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+  }
+
+  @media screen and (min-width: 1280px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px 50px;
+  }
+}
+
+.slider__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    grid-row: 1/2;
+
+    padding: 60px 80px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    align-items: start;
+  }
+}
+
+.slider__new {
+  @include badge;
+}
+
+.slider__title {
+  @include slide-header-xs;
+
+  @media screen and (min-width: 768px) {
+    @include slide-header-md-lg(center);
+  }
+
+  @media screen and (min-width: 1280px) {
+    @include slide-header-md-lg(left);
+  }
+}
+
+.slider__text {
+  @include slide-description-xs;
+  max-width: 280px;
+
+  @media screen and (min-width: 768px) {
+    @include slide-description-md-lg(center);
+    max-width: 600px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    @include slide-description-md-lg(left);
+    max-width: 625px;
+  }
+}
+
+swiper-container::part(button-next) {
+  position: absolute;
+  height: 100%;
+  padding: 10px;
+  width: 11px;
+  right: 0;
+  top: 0;
+
+  color: $base-primary;
+
+  &:active {
+    background: linear-gradient(to right, transparent 0%, $base-primary 175%);
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 34px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    top: -25%;
+    height: 120%;
+  }
+}
+
+swiper-container::part(button-prev) {
+  position: absolute;
+  height: 100%;
+  padding: 10px;
+  width: 11px;
+  left: 0;
+  top: 0;
+  color: $base-primary;
+
+  &:active {
+    background: linear-gradient(to left, transparent 0%, $base-primary 175%);
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 34px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    top: -25%;
+    height: 120%;
+  }
+}
+
+.slider__buy-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 10px;
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 30px;
+  }
+}
+
+.slider__buy-price-wrapper {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.slider__buy-price--old {
+  @include oldPrice;
+}
+
+.slider__buy-price--new {
+  @include slide-description-md-lg(left);
+  font-weight: 600;
+}
+
+swiper-container::part(bullet) {
+  width: 62px;
+  height: 4px;
+  border-radius: 0;
+  margin: 60px 4px;
+
+  background-color: $base-white;
+  transition: background-color 0.5s ease-in;
+}
+
+swiper-container::part(bullet-active) {
+  width: 62px;
+  height: 4px;
+  border-radius: 0;
+  margin: 60px 4px;
+
+  background-color: $base-primary;
+  transition: background-color 0.5s ease-out;
+}

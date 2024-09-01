@@ -102,7 +102,289 @@
       </div>
     </header>
     <main>
-      <h1>Страница для старта</h1>
+      <section class="slider">
+        <swiper-container
+          init="false"
+          navigation="true"
+          pagination="true"
+          loop="true"
+        >
+          <swiper-slide>
+            <div class="slider__slide-wrapper">
+              <picture>
+                <source
+                  srcset="
+                    images/flat_white_xs@1x.webp 1x,
+                    images/flat_white_xs@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                  width="280"
+                  height="280"
+                />
+                <source
+                  srcset="
+                    images/flat_white_md@1x.webp 1x,
+                    images/flat_white_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px) and (max-width: 1279px)"
+                  width="476"
+                  height="476"
+                />
+                <source
+                  srcset="
+                    images/flat_white_lg@1x.webp 1x,
+                    images/flat_white_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1280px)"
+                  width="600"
+                  height="600"
+                />
+                <source
+                  srcset="
+                    images/flat_white_xs@1x.png 1x,
+                    images/flat_white_xs@2x.png 2x
+                  "
+                  type="image/png"
+                  media="(max-width: 767px)"
+                  width="280"
+                  height="280"
+                />
+                <source
+                  srcset="
+                    images/flat_white_md@1x.png 1x,
+                    images/flat_white_md@2x.png 2x
+                  "
+                  type="image/png"
+                  media="(min-width: 768px) and (max-width: 1279px)"
+                  width="476"
+                  height="476"
+                />
+                <source
+                  srcset="
+                    images/flat_white_lg@1x.png 1x,
+                    images/flat_white_lg@2x.png 2x
+                  "
+                  type="image/png"
+                  media="(min-width: 1280px)"
+                  width="600"
+                  height="600"
+                />
+
+                <img
+                  class="slider__image"
+                  width="280"
+                  height="280"
+                  src="images/flat_white_xs@1x.png"
+                  alt="Flat white"
+                />
+              </picture>
+              <div class="slider__text-wrapper">
+                <p class="slider__new">Новинка!</p>
+                <h1 class="slider__title">Декаф Флэт Уайт</h1>
+                <p class="slider__text">
+                  Свежесваренный кофе без кофеина из Эфиопии с натуральным
+                  фермерским молоком — то, что нужно для расслабления после
+                  тяжёлого рабочего дня
+                </p>
+                <div class="slider__buy-wrapper">
+                  <div class="slider__buy-price-wrapper">
+                    <p class="slider__buy-price--old">295₽</p>
+                    <p class="slider__buy-price--new">225₽</p>
+                  </div>
+                  <button type="button" class="slider__buy-button">
+                    Заказать
+                  </button>
+                </div>
+              </div>
+            </div></swiper-slide
+          >
+          <swiper-slide>
+            <div class="slider__slide-wrapper">
+              <picture>
+                <source
+                  srcset="
+                    images/espresso_xs@1x.webp 1x,
+                    images/espresso_xs@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                  width="280"
+                  height="280"
+                />
+                <source
+                  srcset="
+                    images/espresso_xs@1x.webp 1x,
+                    images/espresso_xs@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px) and (max-width: 1279px)"
+                  width="476"
+                  height="476"
+                />
+                <source
+                  srcset="
+                    images/espresso_xs@1x.webp 1x,
+                    images/espresso_xs@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1280px)"
+                  width="600"
+                  height="600"
+                />
+                <source
+                  srcset="
+                    images/espresso_xs@1x.png 1x,
+                    images/espresso_xs@2x.png 2x
+                  "
+                  type="image/png"
+                  media="(max-width: 767px)"
+                  width="280"
+                  height="280"
+                />
+                <source
+                  srcset="
+                    images/espresso_xs@1x.png 1x,
+                    images/espresso_xs@2x.png 2x
+                  "
+                  type="image/png"
+                  media="(min-width: 768px) and (max-width: 1279px)"
+                  width="476"
+                  height="476"
+                />
+                <source
+                  srcset="
+                    images/espresso_xs@1x.png 1x,
+                    images/espresso_xs@2x.png 2x
+                  "
+                  type="image/png"
+                  media="(min-width: 1280px)"
+                  width="600"
+                  height="600"
+                />
+                <img
+                  class="slider__image"
+                  width="280"
+                  height="280"
+                  src="images/espresso_xs@1x.png"
+                  alt="Espresso"
+                />
+              </picture>
+              <div class="slider__text-wrapper">
+                <p class="slider__new">Новинка!</p>
+                <h1 class="slider__title">Тройной Эспрессо</h1>
+                <p class="slider__text">
+                  Мощнее укола адреналина, чернее самой тёмной ночи, этот
+                  тройной эспрессо из Колумбии покажет вам, что такое настоящая
+                  бодрость
+                </p>
+                <div class="slider__buy-wrapper">
+                  <div class="slider__buy-price-wrapper">
+                    <p class="slider__buy-price--old">395₽</p>
+                    <p class="slider__buy-price--new">375₽</p>
+                  </div>
+                  <button type="button" class="slider__buy-button">
+                    Заказать
+                  </button>
+                </div>
+              </div>
+            </div></swiper-slide
+          >
+          <swiper-slide>
+            <div class="slider__slide-wrapper">
+              <picture>
+                <source
+                  srcset="
+                    images/lavender_xs@1x.webp 1x,
+                    images/lavender_xs@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                  width="280"
+                  height="280"
+                />
+                <source
+                  srcset="
+                    images/lavender_xs@1x.webp 1x,
+                    images/lavender_xs@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px) and (max-width: 1279px)"
+                  width="476"
+                  height="476"
+                />
+                <source
+                  srcset="
+                    images/lavender_xs@1x.webp 1x,
+                    images/lavender_xs@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1280px)"
+                  width="600"
+                  height="600"
+                />
+                <source
+                  srcset="
+                    images/lavender_xs@1x.png 1x,
+                    images/lavender_xs@2x.png 2x
+                  "
+                  type="image/png"
+                  media="(max-width: 767px)"
+                  width="280"
+                  height="280"
+                />
+                <source
+                  srcset="
+                    images/lavender_xs@1x.png 1x,
+                    images/lavender_xs@2x.png 2x
+                  "
+                  type="image/png"
+                  media="(min-width: 768px) and (max-width: 1279px)"
+                  width="476"
+                  height="476"
+                />
+                <source
+                  srcset="
+                    images/lavender_xs@1x.png 1x,
+                    images/lavender_xs@2x.png 2x
+                  "
+                  type="image/png"
+                  media="(min-width: 1280px)"
+                  width="600"
+                  height="600"
+                />
+                <img
+                  class="slider__image"
+                  width="280"
+                  height="280"
+                  src="images/lavender_xs@1x.png"
+                  alt="Lavender"
+                />
+              </picture>
+              <div class="slider__text-wrapper">
+                <p class="slider__new">Новинка!</p>
+                <h1 class="slider__title">Лавандовый Латте</h1>
+                <p class="slider__text">
+                  Невероятное сочетание перуанской высокогорной арабики с
+                  молоком ламы и лавандовым сиропом унесёт вас прямо на вершину
+                  Радужных гор
+                </p>
+                <div class="slider__buy-wrapper">
+                  <div class="slider__buy-price-wrapper">
+                    <p class="slider__buy-price--old">285₽</p>
+                    <p class="slider__buy-price--new">265₽</p>
+                  </div>
+                  <button type="button" class="slider__buy-button">
+                    Заказать
+                  </button>
+                </div>
+              </div>
+            </div></swiper-slide
+          >
+        </swiper-container>
+      </section>
     </main>
   </body>
 </html>
