@@ -8,3 +8,9 @@
 2. add header - 2h
     * adaptive
     * hover, focus, active effects
+
+3. add slider - 5h
+    * learn documentation
+    * styles
+    * adaptive 
+    * debugging
