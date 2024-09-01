@@ -118,3 +118,10 @@
     background-color: $light-gray;
   }
 }
+
+@mixin advantages-icon {
+  display: block;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto;
+}
