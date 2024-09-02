@@ -37,7 +37,7 @@
   font-size: 12px;
   line-height: 16px;
 
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: 1439px) {
     @include visually-hidden;
   }
 }
@@ -203,7 +203,7 @@
 }
 
 .header__user-text {
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: 1439px) {
     @include visually-hidden;
   }
 }

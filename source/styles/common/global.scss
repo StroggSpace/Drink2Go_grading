@@ -24,7 +24,7 @@ body {
     @include basic-text(center);
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1440px) {
     @include basic-text(left);
   }
 }

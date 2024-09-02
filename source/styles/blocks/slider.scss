@@ -16,7 +16,7 @@ swiper-slide {
 [data-swiper-slide-index="0"] {
   background-color: $flat-white;
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
     background: linear-gradient(to bottom, $flat-white 80%, white 20%);
   }
 }
@@ -24,7 +24,7 @@ swiper-slide {
 [data-swiper-slide-index="1"] {
   background-color: $espresso;
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
     background: linear-gradient(to bottom, $espresso 80%, white 20%);
   }
 }
@@ -32,7 +32,7 @@ swiper-slide {
 [data-swiper-slide-index="2"] {
   background-color: $lavender-latte;
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
     background: linear-gradient(to bottom, $lavender-latte 80%, white 20%);
   }
 }
@@ -48,14 +48,14 @@ swiper-slide {
     padding: 0;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1440px) {
     width: 600px;
     height: 600px;
   }
 }
 
 swiper-container::part(pagination) {
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: 1439px) {
     @include visually-hidden;
   }
 }
@@ -71,7 +71,7 @@ swiper-container::part(pagination) {
     display: grid;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1440px) {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 30px 50px;
@@ -84,13 +84,13 @@ swiper-container::part(pagination) {
   justify-content: center;
   align-items: center;
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
     grid-row: 1/2;
 
     padding: 60px 80px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1440px) {
     align-items: start;
   }
 }
@@ -106,7 +106,7 @@ swiper-container::part(pagination) {
     @include slide-header-md-lg(center);
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1440px) {
     @include slide-header-md-lg(left);
   }
 }
@@ -120,7 +120,7 @@ swiper-container::part(pagination) {
     max-width: 600px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1440px) {
     @include slide-description-md-lg(left);
     max-width: 625px;
   }
@@ -144,7 +144,7 @@ swiper-container::part(button-next) {
     padding: 34px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
     top: -25%;
     height: 120%;
   }
@@ -167,7 +167,7 @@ swiper-container::part(button-prev) {
     padding: 34px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
     top: -25%;
     height: 120%;
   }
@@ -181,7 +181,7 @@ swiper-container::part(button-prev) {
 
   margin-top: 10px;
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1440px) {
     margin-top: 30px;
   }
 }
