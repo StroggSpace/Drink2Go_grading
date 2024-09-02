@@ -1,4 +1,4 @@
-# Time track 
+# Time track
 
 1. preparation for development - 2h
     * download fonts, images
@@ -14,10 +14,15 @@
     * learn documentation
     * layout
     * styles
-    * adaptive 
+    * adaptive
     * debugging
 
 4. add advantages section - 1h
     * layout
     * styles
-    * adaptive 
+    * adaptive
+
+5. add form - 4h
+    * layout
+    * styles
+    * animation

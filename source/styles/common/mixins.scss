@@ -96,6 +96,8 @@
   padding: 8px 20px;
   border-radius: 4px;
 
+  cursor: pointer;
+
   &:hover {
     background-color: $primary-lighter;
   }
@@ -110,9 +112,14 @@
 }
 
 @mixin button-alt {
-  @extend .button-default;
+  @include button-default;
   background-color: $base-white;
   color: $base-primary;
+
+  &:hover,
+  &:active  {
+    color: $base-white;
+  }
 
   &:disabled {
     background-color: $light-gray;
@@ -124,4 +131,12 @@
   width: 56px;
   height: 56px;
   margin: 0 auto;
+}
+
+@mixin effect {
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
 }

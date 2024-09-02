@@ -1,0 +1,305 @@
+.form {
+  width: 320px;
+  padding: 0 20px;
+}
+
+.form__filter {
+  text-align: left;
+}
+
+.form__filter {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  &--price {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.range-slider__input[type='range'] {
+  height: 20px;
+  outline: none;
+}
+
+.range-slider__input[type='range'],
+.range-slider__input[type='range']::-webkit-slider-runnable-track,
+.range-slider__input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: none;
+  width: 100%;
+}
+
+.range-slider__input[type='range']::-webkit-slider-runnable-track,
+.range-slider__input[type='range']::-moz-range-track,
+.range-slider__input[type='range']::-ms-track {
+  height: 2px;
+
+  background: $light-gray;
+}
+
+.range-slider__input[type='range']:nth-child(2)::-webkit-slider-runnable-track,
+.range-slider__input[type='range']:nth-child(2)::-moz-range-track,
+.range-slider__input[type='range']:nth-child(2)::-ms-track {
+  background: none;
+}
+
+.range-slider__input[type='range']::-webkit-slider-thumb,
+.range-slider__input[type='range']::-moz-range-thumb,
+.range-slider__input[type='range']::-ms-thumb {
+  -webkit-appearance: none;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  margin-top: -7px;
+  background: $base-white;
+  outline: 2px solid $base-primary;
+  border: 2px solid $base-white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  @include effect;
+}
+
+.range-slider__input[type='range']::-webkit-slider-thumb:hover,
+.range-slider__input[type='range']::-webkit-slider-thumb:focus,
+.range-slider__input[type='range']::-moz-range-thumb:hover,
+.range-slider__input[type='range']::-moz-range-thumb:focus,
+.range-slider__input[type='range']::-ms-thumb:hover,
+.range-slider__input[type='range']::-ms-thumb:focus {
+  background: $primary-opacity;
+  cursor: pointer;
+}
+
+.range-slider__input[type='range']::-webkit-slider-thumb:active,
+.range-slider__input[type='range']::-moz-range-thumb:active,
+.range-slider__input[type='range']::-ms-thumb:active {
+  cursor: grabbing;
+  background: $base-primary;
+}
+
+.range-slider__input[type='range']::-webkit-slider-thumb:disabled,
+.range-slider__input[type='range']::-moz-range-thumb:disabled,
+.range-slider__input[type='range']::-ms-thumb:disabled {
+  cursor: not-allowed;
+  background: $base-white;
+  outline: 2px solid $lightest-grey;
+}
+
+.range-slider__input[type='range']:nth-child(1)::-webkit-slider-thumb,
+.range-slider__input[type='range']:nth-child(1)::-moz-range-thumb,
+.range-slider__input[type='range']:nth-child(1)::-ms-thumb {
+  z-index: 2;
+}
+
+.range-slider {
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  width: 100%;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &--min {
+    position: absolute;
+    margin-top: 20px;
+    left: 0;
+  }
+
+  &--max {
+    position: relative;
+    float: right;
+    margin-right: -5px;
+  }
+}
+.form__title {
+  margin-bottom: 10px;
+}
+
+.form__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 280px;
+}
+
+.form__price-input {
+  @include basic-text(center);
+
+  padding: 8px 10px;
+  width: 120px;
+
+  border: 2px solid $primary-lighter;
+  border-radius: 4px;
+
+
+
+  &:focus {
+    border: 2px solid $primary-darker;
+  }
+
+  &:disabled {
+    border: 2px solid $light-gray;
+    cursor: not-allowed;
+  }
+}
+
+.form__price-separator {
+  width: 10px;
+  height: 2px;
+
+  margin: auto 5px;
+
+  background-color: $light-gray;
+}
+
+.form__label {
+  position: relative;
+  cursor: pointer;
+}
+
+.form__label--radio {
+  padding-left: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background: $base-white;
+    outline: 2px solid $base-gray;
+    border: 2px solid $base-white;
+    border-radius: 50%;
+    @include effect;
+  }
+
+  &:focus,
+  &:hover {
+    &::before {
+      outline: 2px solid $base-primary;
+      background: $primary-opacity;
+    }
+  }
+}
+
+.form__item--radio {
+  &:checked  {
+    ~ .form__label--radio::before {
+      background: $base-primary;
+      outline: 2px solid $base-primary;
+    }
+  }
+
+  &:disabled {
+    ~ .form__label--radio {
+      cursor: not-allowed;
+    }
+    ~ .form__label--radio:before {
+      background: $base-white;
+      outline: 2px solid $light-gray;
+    }
+  }
+
+  &:checked:disabled {
+    ~ .form__label--radio::before {
+      background: $base-gray;
+      outline: 2px solid $base-gray;
+    }
+  }
+}
+
+.form__label--toggle {
+  padding-left: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    height: 24px;
+    width: 42px;
+    background: $base-gray;
+    border-radius: 25px;
+    @include effect;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    height: 20px;
+    width: 20px;
+    background: $base-white;
+    border-radius: 50%;
+    @include effect;
+  }
+
+
+  &:focus,
+  &:hover {
+    &::before {
+      border: 2px solid $base-primary;
+      outline: none;
+      background: $primary-opacity;
+    }
+  }
+}
+
+.form__item--toggle {
+  &:checked  {
+    ~ .form__label--toggle::before {
+      background: $base-primary;
+      border: 2px solid $base-primary;
+      outline: none;
+    }
+
+    ~ .form__label--toggle::after {
+      left: 20px;
+@include effect;
+    }
+  }
+
+  &:disabled {
+    ~ .form__label--toggle {
+      cursor: not-allowed;
+    }
+    ~ .form__label--toggle:before {
+      background: $light-gray;
+      border: none;
+    }
+  }
+
+  &:checked:disabled {
+    ~ .form__label--toggle::before {
+      background: $light-gray;
+      border: none;
+    }
+    ~ .form__label--toggle::after {
+      background: $base-gray;
+      border: none;
+    }
+  }
+}
+
+.form__submit-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}

@@ -59,10 +59,50 @@ h6 {
   padding: 0;
 }
 
-button {
+.button {
   @include button-default;
+  @include effect;
+}
+
+.button--alt {
+  @include button-alt;
+  @include effect;
 }
 
 .visually-hidden {
   @include visually-hidden;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  max-width: 100%;
+}
+
+legend {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: $base-black;
+
+  padding: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+  outline: none;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px 0;
 }
