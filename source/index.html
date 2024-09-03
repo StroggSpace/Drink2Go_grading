@@ -177,7 +177,8 @@
                   class="slider__image"
                   width="280"
                   height="280"
-                  src="images/flat_white_xs@1x.png"
+                  src="images/flat_white_xs@1x.png 1x"
+                  srcset="images/flat_white_xs@2x.png 2x"
                   alt="Flat white"
                 />
               </picture>
@@ -268,7 +269,8 @@
                   class="slider__image"
                   width="280"
                   height="280"
-                  src="images/espresso_xs@1x.png"
+                  src="images/espresso_xs@1x.png 1x"
+                  srcset="images/espresso_xs@2x.png 2x"
                   alt="Espresso"
                 />
               </picture>
@@ -359,7 +361,8 @@
                   class="slider__image"
                   width="280"
                   height="280"
-                  src="images/lavender_xs@1x.png"
+                  src="images/lavender_xs@1x.png 1x"
+                  srcset="images/lavender_xs@2x.png 2x"
                   alt="Lavender"
                 />
               </picture>
@@ -426,6 +429,7 @@
       <section class="catalog section">
         <h1 class="advantages__title">Каталог</h1>
         <h2 class="advantages__subtitle">Каталог кофейных напитков</h2>
+        <div class="catalog__wrapper">
         <form class="catalog__form form" action="#" method="get">
           <fieldset class="form__filter form__filter--price">
             <legend class="form__filter-title">Цена</legend>
@@ -550,6 +554,295 @@
           <button class="form__reset button--alt" type="reset">Сбросить</button>
           </div>
           </form>
+          <div class="catalog__list list">
+            <div class="list__sort">
+              <p class="list__sort-text">Сортировать:</p>
+              <select class="list__sort-select">
+                <option value="popular">по умолчанию</option>
+                <option value="cheap">сначала дешевые</option>
+                <option value="expensive">сначала дорогие</option>
+              </select>
+            </div>
+            <ul class="list__wrapper">
+              <li class="list__item">
+                <a class="list__link" href="#">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="images/coffee_1@1x.webp 1x, images/coffee_1@2x.webp 2x"
+                      width="130"
+                      height="188"
+                    />
+                    <img
+                      class="list__image"
+                      src="images/coffee_1@1x.png 1x"
+                      srcset="images/coffee_1@2x.png 2x"
+                      width="130"
+                      height="188"
+                      alt="Декаф Флэт Уайт"
+                    />
+                  </picture>
+                </a>
+                <div class="list__text-wrapper">
+                <div class="list__text-wrapper">
+                <h4 class="list__title">Декаф Флэт Уайт</h4>
+                <p class="list__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                </div>
+                </div>
+                <div class="list__price-wrapper">
+                  <p class="list__price--new">225₽</p>
+                  <button class="list__buy-button button" type="button">В корзину</button>
+                </div>
+              </li>
+              <li class="list__item">
+                <a class="list__link" href="#">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="images/coffee_2@1x.webp 1x, images/coffee_2@2x.webp 2x"
+                      width="130"
+                      height="188"
+                    />
+                    <img
+                      class="list__image"
+                      src="images/coffee_2@1x.png 1x"
+                      srcset="images/coffee_2@2x.png 2x"
+                      width="130"
+                      height="188"
+                      alt="Декаф Флэт Уайт"
+                    />
+                  </picture>
+                </a>
+
+                <div class="list__text-wrapper">
+                <h4 class="list__title">Декаф Флэт Уайт</h4>
+                <p class="list__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                </div>
+
+                <div class="list__price-wrapper">
+                  <p class="list__price--new">225₽</p>
+                  <button class="list__buy-button button" type="button">В корзину</button>
+                </div>
+              </li>
+              <li class="list__item">
+                <a class="list__link" href="#">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="images/coffee_3@1x.webp 1x, images/coffee_3@2x.webp 2x"
+                      width="130"
+                      height="188"
+                    />
+                    <img
+                      class="list__image"
+                      src="images/coffee_3@1x.png 1x"
+                      srcset="images/coffee_3@2x.png 2x"
+                      width="130"
+                      height="188"
+                      alt="Декаф Флэт Уайт"
+                    />
+                  </picture>
+                </a>
+                <div class="list__text-wrapper">
+                <h4 class="list__title">Декаф Флэт Уайт</h4>
+                <p class="list__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                </div>
+                <div class="list__price-wrapper">
+                  <p class="list__price--new">225₽</p>
+                  <button class="list__buy-button button" type="button">В корзину</button>
+                </div>
+              </li>
+              <li class="list__item">
+                <a class="list__link" href="#">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="images/coffee_4@1x.webp 1x, images/coffee_4@2x.webp 2x"
+                      width="130"
+                      height="188"
+                    />
+                    <img
+                      class="list__image"
+                      src="images/coffee_4@1x.png 1x"
+                      srcset="images/coffee_4@2x.png 2x"
+                      width="130"
+                      height="188"
+                      alt="Декаф Флэт Уайт"
+                    />
+                  </picture>
+                </a>
+                <div class="list__text-wrapper">
+                <h4 class="list__title">Декаф Флэт Уайт</h4>
+                <p class="list__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                </div>
+                <div class="list__price-wrapper">
+                  <p class="list__price--new">225₽</p>
+                  <button class="list__buy-button button" type="button">В корзину</button>
+                </div>
+              </li>
+              <li class="list__item">
+                <a class="list__link" href="#">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="images/coffee_5@1x.webp 1x, images/coffee_5@2x.webp 2x"
+                      width="130"
+                      height="188"
+                    />
+                    <img
+                      class="list__image"
+                      src="images/coffee_5@1x.png 1x"
+                      srcset="images/coffee_5@2x.png 2x"
+                      width="130"
+                      height="188"
+                      alt="Декаф Флэт Уайт"
+                    />
+                  </picture>
+                </a>
+                <div class="list__text-wrapper">
+                <h4 class="list__title">Декаф Флэт Уайт</h4>
+                <p class="list__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                </div>
+                <div class="list__price-wrapper">
+                  <p class="list__price--new">225₽</p>
+                  <button class="list__buy-button button" type="button">В корзину</button>
+                </div>
+              </li>
+              <li class="list__item">
+                <a class="list__link" href="#">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="images/coffee_6@1x.webp 1x, images/coffee_6@2x.webp 2x"
+                      width="130"
+                      height="188"
+                    />
+                    <img
+                      class="list__image"
+                      src="images/coffee_6@1x.png 1x"
+                      srcset="images/coffee_6@2x.png 2x"
+                      width="130"
+                      height="188"
+                      alt="Декаф Флэт Уайт"
+                    />
+                  </picture>
+                </a>
+                <div class="list__text-wrapper">
+                <h4 class="list__title">Декаф Флэт Уайт</h4>
+                <p class="list__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                </div>
+                <div class="list__price-wrapper">
+                  <p class="list__price--new">225₽</p>
+                  <button class="list__buy-button button" type="button">В корзину</button>
+                </div>
+              </li>
+              <li class="list__item">
+                <a class="list__link" href="#">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="images/coffee_7@1x.webp 1x, images/coffee_7@2x.webp 2x"
+                      width="130"
+                      height="188"
+                    />
+                    <img
+                      class="list__image"
+                      src="images/coffee_7@1x.png 1x"
+                      srcset="images/coffee_7@2x.png 2x"
+                      width="130"
+                      height="188"
+                      alt="Фото продукции"
+                      alt="Декаф Флэт Уайт"
+                    />
+                  </picture>
+                </a>
+                <div class="list__text-wrapper">
+                <h4 class="list__title">Декаф Флэт Уайт</h4>
+                <p class="list__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                </div>
+                <div class="list__price-wrapper">
+                  <p class="list__price--new">225₽</p>
+                  <button class="list__buy-button button" type="button">В корзину</button>
+                </div>
+              </li>
+              <li class="list__item">
+                <a class="list__link" href="#">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="images/coffee_8@1x.webp 1x, images/coffee_8@2x.webp 2x"
+                      width="130"
+                      height="188"
+                    />
+                    <img
+                      class="list__image"
+                      src="images/coffee_8@1x.png 1x"
+                      srcset="images/coffee_8@2x.png 2x"
+                      width="130"
+                      height="188"
+                      alt="Декаф Флэт Уайт"
+                    />
+                  </picture>
+                </a>
+                <div class="list__text-wrapper">
+                <h4 class="list__title">Декаф Флэт Уайт</h4>
+                <p class="list__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                </div>
+                <div class="list__price-wrapper">
+                  <p class="list__price--new">225₽</p>
+                  <button class="list__buy-button button" type="button">В корзину</button>
+                </div>
+              </li>
+              <li class="list__item">
+                <a class="list__link" href="#">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="images/coffee_9@1x.webp 1x, images/coffee_9@2x.webp 2x"
+                      width="130"
+                      height="188"
+                    />
+                    <img
+                      class="list__image"
+                      src="images/coffee_9@1x.png 1x"
+                      srcset="images/coffee_9@2x.png 2x"
+                      width="130"
+                      height="188"
+                      alt="Декаф Флэт Уайт"
+                    />
+                  </picture>
+                </a>
+                <div class="list__text-wrapper">
+                <h4 class="list__title">Декаф Флэт Уайт</h4>
+                <p class="list__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                </div>
+                <div class="list__price-wrapper">
+                  <p class="list__price--new">225₽</p>
+                  <button class="list__buy-button button" type="button">В корзину</button>
+                </div>
+              </li>
+            </ul>
+            <div class="catalog__pagination pagination">
+              <button type="button" class="button--alt pagination__button pagination__button--prev">
+                <p class="visually-hidden">Назад</p>
+              </button>
+              <ul class="pagination__list">
+                <li class="pagination__item">
+                  <a class="button--alt pagination__link" href="#">1</a>
+                </li>
+                <li class="pagination__item">
+                  <a class=" button--alt pagination__link pagination__link--active" href="#">2</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="button--alt pagination__link" href="#">3</a>
+                </li>
+              </ul>
+              <button class="button--alt pagination__button pagination__button--next">
+                <p class="visually-hidden">Вперед</p>
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </body>

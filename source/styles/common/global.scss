@@ -1,8 +1,6 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
 
 html {
-  height: 100dvh;
-  width: 100dvw;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -40,6 +38,8 @@ button {
   border: none;
   outline: none;
   color: unset;
+
+  font-family: $primary-font;
 }
 
 ul {

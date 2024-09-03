@@ -2,15 +2,22 @@
   background-color: $lightest-grey;
 }
 
-.catalog__form {
+.catalog__wrapper {
   display: flex;
   flex-direction: column;
-
+  align-items: center;
   gap: 20px;
 
-  @media screen and (min-width: 768px) {
+  padding: 0px 20px;
+
+  @media screen and (min-width: 1440px) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 320px 1fr;
+
+    align-items: start;
   }
 }
 
+.catalog__pagination {
+  margin-top: 20px;
+}

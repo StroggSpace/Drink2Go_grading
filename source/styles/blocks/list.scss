@@ -1,0 +1,97 @@
+.list__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.list__item {
+  display: flex;
+  flex-direction: column;
+
+  background-color: $base-white;
+  padding: 40px 20px 20px;
+  border-radius: 4px;
+
+  @media screen and (min-width: 1440px) {
+    align-items: center;
+  }
+}
+
+.list__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: start;
+
+  margin-bottom: 16px;
+}
+
+.list__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.list__price--new {
+  @include slide-description-md-lg(left);
+  font-weight: 600;
+}
+
+.list__link {
+margin-bottom: 24px;
+}
+
+.list__buy-button {
+  display: flex;
+  &::before {
+    content: '';
+    background-image: url('../../icons/add_to_basket.svg');
+    width: 20px;
+    height: 16px;
+    display: block;
+    margin-right: 8px;
+  }
+}
+
+.list__sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 0;
+
+  @media screen and (min-width: 1440px) {
+  padding: 0;
+  }
+}
+
+.list__sort-text {
+  font-family: $primary-font;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.list__sort-select {
+  font-family: $primary-font;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: $base-primary;
+  border: none;
+  background-color: transparent;
+
+  outline: none;
+}
