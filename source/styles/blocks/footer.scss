@@ -1,0 +1,159 @@
+.footer {
+  text-transform: uppercase;
+
+  padding-top: 10px;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 20px;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 1/-1;
+  }
+
+  @media screen and (min-width: 1440px) {
+    grid-column: 1/2;
+    flex-direction: column;
+    align-items: start;
+
+    justify-content: space-around;
+  }
+}
+
+.footer__title {
+  @include basic-text(left);
+  font-size: 12px;
+  line-height: 16px;
+
+  text-transform: none;
+
+  @media screen and (max-width: 1439px) {
+    @include visually-hidden;
+  }
+}
+
+.footer__logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__social {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+}
+
+.footer__nav-list-title {
+  @include h4;
+  text-transform: none;
+}
+
+.footer__section {
+  padding: 20px 20px;
+
+  &:not(:last-child) {
+    border-top:  1px solid $base-secondary;
+    @media screen and (min-width: 768px) {
+      border: none;
+    }
+  }
+  &:last-of-type {
+    border-bottom:  1px solid $base-secondary;
+    @media screen and (min-width: 768px) {
+      border: none;
+    }
+  }
+}
+
+
+.footer__contacts-list {
+  text-transform: none;
+}
+
+.footer__contacts-list-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &--address::before {
+    content: '';
+
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    background-image: url("../../icons/address.svg");
+  }
+
+  &--phone::before {
+    content: '';
+
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    background-image: url("../../icons/phone.svg");
+  }
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  text-transform: none;
+
+  width: 100%;
+  padding: 20px 0;
+
+  @include basic-text(center, $base-gray);
+
+  @media screen and (min-width: 768px) {
+    grid-column: 1/-1;
+  }
+}
+
+.footer__copyright-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &::after {
+    content: '';
+
+    display: inline-block;
+    width: 12px;
+    height: 16px;
+
+    background-image: url("../../images/html_academy.svg");
+  }
+}

@@ -37,3 +37,7 @@
     * adaptive - 30m
 
 9. add pagination - 15m
+
+10. add map - 1h
+
+11. add footer - 1h
