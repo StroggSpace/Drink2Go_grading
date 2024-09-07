@@ -41,3 +41,5 @@
 10. add map - 1h
 
 11. add footer - 1h
+
+12. add burger menu script - 15m
