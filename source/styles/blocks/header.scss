@@ -63,6 +63,8 @@
 
 .header__nav-list {
   display: flex;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
 
   @media screen and (max-width: 767px) {
     flex-direction: column;
@@ -109,7 +111,6 @@
     &:hover,
     &:focus {
       color: $base-primary;
-
     }
 
     &:active {
@@ -126,7 +127,7 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: 0;
@@ -140,6 +141,7 @@
 .header__user-list {
   @media screen and (max-width: 767px) {
     grid-column: 2 / -1;
+    grid-row: 1 / 2;
   }
 
   display: flex;
@@ -249,6 +251,19 @@
     height: 16px;
     display: block;
     background-image: url("../../icons/close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.header__user-burger--close {
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-image: url("../../icons/burger.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
