@@ -100,7 +100,7 @@
                 type="button"
                 class="header__user-link header__user-burger header__user-burger--open"
               >
-                <p class="visually-hidden">Меню</p>
+                <span class="visually-hidden">меню</span>
               </button>
             </li>
           </ul>
@@ -183,7 +183,7 @@
                   class="slider__image"
                   width="280"
                   height="280"
-                  src="images/flat_white_xs@1x.png 1x"
+                  src="images/flat_white_xs@1x.png"
                   srcset="images/flat_white_xs@2x.png 2x"
                   alt="Flat white"
                 />
@@ -275,7 +275,7 @@
                   class="slider__image"
                   width="280"
                   height="280"
-                  src="images/espresso_xs@1x.png 1x"
+                  src="images/espresso_xs@1x.png"
                   srcset="images/espresso_xs@2x.png 2x"
                   alt="Espresso"
                 />
@@ -367,7 +367,7 @@
                   class="slider__image"
                   width="280"
                   height="280"
-                  src="images/lavender_xs@1x.png 1x"
+                  src="images/lavender_xs@1x.png"
                   srcset="images/lavender_xs@2x.png 2x"
                   alt="Lavender"
                 />
@@ -464,6 +464,7 @@
                   >Минимальная цена</label
                 >
                 <input
+                  id="min-price"
                   class="form__price-input"
                   type="number"
                   name="min-price"
@@ -477,6 +478,7 @@
                   >Максимальная цена</label
                 >
                 <input
+                  id="max-price"
                   class="form__price-input"
                   type="number"
                   name="max-price"
@@ -658,7 +660,7 @@
                     />
                     <img
                       class="list__image"
-                      src="images/coffee_1@1x.png 1x"
+                      src="images/coffee_1@1x.png"
                       srcset="images/coffee_1@2x.png 2x"
                       width="130"
                       height="188"
@@ -696,7 +698,7 @@
                     />
                     <img
                       class="list__image"
-                      src="images/coffee_2@1x.png 1x"
+                      src="images/coffee_2@1x.png"
                       srcset="images/coffee_2@2x.png 2x"
                       width="130"
                       height="188"
@@ -733,7 +735,7 @@
                     />
                     <img
                       class="list__image"
-                      src="images/coffee_3@1x.png 1x"
+                      src="images/coffee_3@1x.png"
                       srcset="images/coffee_3@2x.png 2x"
                       width="130"
                       height="188"
@@ -768,7 +770,7 @@
                     />
                     <img
                       class="list__image"
-                      src="images/coffee_4@1x.png 1x"
+                      src="images/coffee_4@1x.png"
                       srcset="images/coffee_4@2x.png 2x"
                       width="130"
                       height="188"
@@ -803,7 +805,7 @@
                     />
                     <img
                       class="list__image"
-                      src="images/coffee_5@1x.png 1x"
+                      src="images/coffee_5@1x.png"
                       srcset="images/coffee_5@2x.png 2x"
                       width="130"
                       height="188"
@@ -838,7 +840,7 @@
                     />
                     <img
                       class="list__image"
-                      src="images/coffee_6@1x.png 1x"
+                      src="images/coffee_6@1x.png"
                       srcset="images/coffee_6@2x.png 2x"
                       width="130"
                       height="188"
@@ -873,12 +875,11 @@
                     />
                     <img
                       class="list__image"
-                      src="images/coffee_7@1x.png 1x"
+                      src="images/coffee_7@1x.png"
                       srcset="images/coffee_7@2x.png 2x"
                       width="130"
                       height="188"
                       alt="Фото продукции"
-                      alt="Декаф Флэт Уайт"
                     />
                   </picture>
                 </a>
@@ -909,7 +910,7 @@
                     />
                     <img
                       class="list__image"
-                      src="images/coffee_8@1x.png 1x"
+                      src="images/coffee_8@1x.png"
                       srcset="images/coffee_8@2x.png 2x"
                       width="130"
                       height="188"
@@ -944,7 +945,7 @@
                     />
                     <img
                       class="list__image"
-                      src="images/coffee_9@1x.png 1x"
+                      src="images/coffee_9@1x.png"
                       srcset="images/coffee_9@2x.png 2x"
                       width="130"
                       height="188"
@@ -971,7 +972,7 @@
                 type="button"
                 class="button--alt pagination__button pagination__button--prev"
               >
-                <p class="visually-hidden">Назад</p>
+                <span class="visually-hidden">Назад</span>
               </button>
               <ul class="pagination__list">
                 <li class="pagination__item">
@@ -991,7 +992,7 @@
               <button
                 class="button--alt pagination__button pagination__button--next"
               >
-                <p class="visually-hidden">Вперед</p>
+                <span class="visually-hidden">Вперед</span>
               </button>
             </div>
           </div>
@@ -1002,24 +1003,24 @@
     </main>
     <footer class="footer">
       <div class="footer__wrapper">
-        <header class="footer__header">
+        <div class="footer__header">
           <div class="footer__logo-wrapper">
-          <picture>
-            <source
-              width="82"
-              height="36"
-              media="(max-width: 1439px)"
-              srcset="images/logo_md.svg"
-            />
-            <source
-              width="170"
-              height="36"
-              media="(min-width: 1440px)"
-              srcset="images/logo_lg.svg"
-            />
-            <img width="82" height="36" src="images/logo_md.svg" alt="Logo" />
-          </picture>
-          <h1 class="footer__title">Интернет-магазин кофейных напитков</h1>
+            <picture>
+              <source
+                width="82"
+                height="36"
+                media="(max-width: 1439px)"
+                srcset="images/logo_md.svg"
+              />
+              <source
+                width="170"
+                height="36"
+                media="(min-width: 1440px)"
+                srcset="images/logo_lg.svg"
+              />
+              <img width="82" height="36" src="images/logo_md.svg" alt="Logo" />
+            </picture>
+            <h1 class="footer__title">Интернет-магазин кофейных напитков</h1>
           </div>
           <div class="footer__social">
             <a class="footer__social-link" href="#">
@@ -1042,10 +1043,10 @@
               />
             </a>
           </div>
-        </header>
+        </div>
         <section class="footer__nav footer__section">
           <ul class="footer__nav-list">
-            <h4 class="footer__nav-list-title">Интернет-магазин</h4>
+            <p class="footer__nav-list-title">Интернет-магазин</p>
             <li class="footer__nav-list-item">
               <a class="footer__nav-list-link" href="#">Каталог</a>
             </li>
@@ -1062,7 +1063,7 @@
         </section>
         <section class="footer__media footer__section">
           <ul class="footer__nav-list">
-            <h4 class="footer__nav-list-title">Медиа</h4>
+            <p class="footer__nav-list-title">Медиа</p>
             <li class="footer__nav-list-item">
               <a class="footer__nav-list-link" href="#">Блог</a>
             </li>
@@ -1076,7 +1077,7 @@
         </section>
         <section class="footer__contacts footer__section">
           <ul class="footer__nav-list footer__contacts-list">
-            <h4 class="footer__nav-list-title">Контакты</h4>
+            <p class="footer__nav-list-title">Контакты</p>
             <li class="footer__nav-list-item">
               <a
                 class="footer__contacts-list-link footer__contacts-list-link--address"
@@ -1095,9 +1096,12 @@
         </section>
         <div class="footer__copyright">
           <p class="footer__copyright-text">Разработанно в</p>
-          <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <a
+            class="footer__copyright-link"
+            href="https://htmlacademy.ru/intensive/adaptive"
+          >
             HTML Academy
-          </button>
+          </a>
         </div>
       </div>
     </footer>
